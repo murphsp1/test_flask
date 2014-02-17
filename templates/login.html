@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block head %}
+    {{ super() }}
+<style></style>
+
+{% endblock %}
+
+{% block body %}
+
+<h1>Hello, {% if name %}{{name}}{% else %}Stranger{% endif %}!</h1>
+<form method = "POST" action="/login">
+    {{ form.csrf_token }}
+    {{form.name.label}} {{form.name()}}
+    {{form.submit() }}
+</form>
+
+{% endblock %}
