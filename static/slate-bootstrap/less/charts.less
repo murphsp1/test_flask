@@ -1,0 +1,34 @@
+.slate-graph {
+  position: relative;
+  &.generating:before {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    vertical-align: middle;
+    width:100%;
+    height: 100%;
+    background: @blue;
+    .opacity(90);
+    z-index: 9997;
+    .border-radius(2px);
+  }
+  &.generating:after {
+    content:"\f021";
+    position: absolute;
+    top:50%;
+    left:50%;
+    text-align: center;
+    z-index: 9998;
+    font-size: 32px;
+    margin-top:-25px;
+    margin-left:-15px;
+    color: #fff;
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+    font-family: FontAwesome;
+  }
+}

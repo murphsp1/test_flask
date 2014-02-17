@@ -1,0 +1,115 @@
+body {
+  padding:0;
+  margin:0 0 115px 0;
+  background: @light-gray;
+  font-family: @sansSerif;
+  color:@dark-blue;
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @sansSerif;  
+}
+
+a {
+  color:@blue;
+  outline: none;
+  &:hover {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+button, input {
+  outline: none;
+}
+
+hr {
+  border-color:@border-color;
+  margin:15px 0;
+}
+
+.fluid {
+  padding:0 15px;
+}
+
+.global {
+  .clearfix();
+}
+
+.no-padding {
+  padding:0;
+}
+
+.toggle-button {
+  display: none;
+}
+
+.title {
+  position: relative;
+  line-height: 46px;
+  font-size:28px;
+  font-family: @sansSerif;
+  margin-left:0;
+  float:left;
+}
+
+.main {
+  margin-top:15px;
+  margin-left:240px;
+  &:before, &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  .box {
+    background: #fff;
+    border:1px solid @border-color;
+    .border-radius(4px);
+    .box-header {
+      padding:15px;
+      background: @very-light-gray;
+      border-bottom:1px solid @border-color;
+      .border-radius(4px 4px 0 0);
+      color:@medium-gray;
+      .clearfix();
+    }
+    .box-content {
+     padding:15px;
+     .border-radius(0 0 4px 4px);
+     .clearfix();
+    }
+  }
+}
+
+.row {
+  margin-bottom:15px;
+}
+.row:after {
+  //content:none;
+}
+
+::selection {
+	background: rgba(38, 160, 229, .25);
+	color:#256E97;
+	}
+::-moz-selection {
+	background: rgba(38, 160, 229, .25);
+	color:#256E97;
+}
+
+
+.btn + span, i + span {
+  margin-left:5px;
+}
+
+.slate-graph > svg { width: 100% !important; }
+
+.fa-padding i {
+  padding:15px 0;
+}

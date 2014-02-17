@@ -1,0 +1,91 @@
+.alert {
+  position: relative;
+  margin:0 0 15px 0;
+  &.alert-success {
+    text-indent: 20px;
+    border-color: @success-border-color;
+    background: @success-background-color;
+    .close {
+      color:@success-text-color;
+      .opacity(50);
+      text-shadow:none;
+      &:hover {
+        .opacity(100);
+      }
+    }
+    &:before {
+      content:"\f00c";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: absolute;
+      left:-6px;
+      top:18px;
+    }
+  }
+  &.alert-info {
+    border-color: @info-border-color;
+    background: @info-background-color;
+    .close {
+      color:@info-text-color;
+      .opacity(50);
+      text-shadow:none;
+      &:hover {
+        .opacity(100);
+      }
+    }
+  }
+  &.alert-warning {
+    border-color: @warning-border-color;
+    background: @warning-background-color;
+    .close {
+      color:@warning-text-color;
+      .opacity(50);
+      text-shadow:none;
+      &:hover {
+        .opacity(100);
+      }
+    }
+  }
+  &.alert-danger {
+    text-indent: 20px;
+    border-color: @danger-border-color;
+    background: @danger-background-color;
+    .close {
+      color:@danger-text-color;
+      .opacity(50);
+      text-shadow:none;
+      &:hover {
+        .opacity(100);
+      }
+    }
+    &:before {
+      content:"\f05e";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: absolute;
+      left:-6px;
+      top:18px;
+    }
+  }
+  &.alert-dark {
+    border-color: @translucent-black;
+    background: @translucent-black;
+    color:#fff;
+    .close {
+      color:#fff;
+      text-shadow:none;
+      .opacity(50);
+      &:hover {
+        .opacity(100);
+      }
+    } 
+  }
+}

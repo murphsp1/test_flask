@@ -1,0 +1,39 @@
+.modal {
+  z-index: 10400;
+  .modal-dialog {
+    margin-top:90px;
+    .border-radius(4px);
+  }
+  .modal-header {
+    background: @dark-blue;
+    .border-radius(4px 4px 0 0);
+    border-color:@border-color;
+    border-bottom-width: 0;
+    color:#fff;
+    .close {
+      color:#fff;
+      .opacity(50);
+      text-shadow: none;
+      margin-top:0;
+      &:hover {
+        .opacity(100);
+      }
+    }
+  }
+  .modal-footer {
+    .border-radius(0 0 4px 4px);
+    border-color:@border-color;
+    background: @dark-blue;
+    background-color: @very-light-gray;
+  }
+  .modal-content {
+    .box-shadow(none);
+    .border-radius(4px);
+    border:0;
+  }
+}
+.modal-backdrop, .modal-backdrop.in {
+  .opacity(85);
+  background: @dark-blue;
+  z-index: 10300;
+}

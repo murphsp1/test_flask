@@ -1,0 +1,29 @@
+.breadcrumb {
+  margin:-15px 0 0 0;
+  .active {
+    color:@medium-gray;
+  }
+  &>li+li:before {
+    color:@medium-gray;
+  }
+  background:#fff;
+  .border-radius(0);
+  padding:11px 20px 12px 20px;
+  border-bottom:1px solid @border-color;
+  a {
+    color:darken(@medium-gray, 30);
+    &:hover {
+      color: @dark-blue;
+    }
+  }
+}
+
+.breadcrumb>li+li:before {
+  content:"\f105";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

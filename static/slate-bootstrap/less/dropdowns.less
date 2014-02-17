@@ -1,0 +1,24 @@
+.dropdown-menu {
+  li a {
+    &:hover {
+      background: @blue;
+      color:#fff;
+    }
+  }
+}
+
+.dropdown-menu.dropdown-light-hover {
+  li:not(.dropdown-header):not(.dropdown-footer) {
+    a {
+      &:hover {
+        color:@dark-blue;
+        background: @very-light-gray;
+        .badge {
+          background: @blue;
+          color:#fff;
+          border-color:@blue;
+        }
+      }
+    }
+  }
+}

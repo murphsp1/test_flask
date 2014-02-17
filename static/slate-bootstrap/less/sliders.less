@@ -1,0 +1,69 @@
+.slider {
+  margin-bottom:20px;
+  border:0;
+  .box-shadow(inset 0 0 1px darken(@border-color,30));
+  .ui-corner-all {
+    .border-radius(2px);
+  }
+  .ui-slider-range {
+    background:@border-color;
+  }
+  .ui-slider-handle {
+    background:#fff;
+    border:0;
+    border:1px solid darken(@border-color, 10);
+    width:16px;
+    height:16px;
+    &:hover, &:active {
+      background: @very-light-gray;
+      border-color:darken(@border-color, 17);
+    }
+  }
+  &.horizontal {
+    height: 12px;
+    .ui-slider-handle {
+      cursor:ew-resize;
+      top:-2px;
+    }
+  }
+  &.vertical {
+    margin-right:20px;
+    width: 12px;
+    .ui-slider-handle {
+      cursor: ns-resize;
+      left:-2px;
+    }
+  }
+  &.blue {
+    border:0;
+    .box-shadow(inset 0 0 1px darken(@border-color,30));
+    .ui-slider-range {
+      background: @blue;
+    }
+  }
+  &.green {
+    border:0;
+    .box-shadow(inset 0 0 1px darken(@border-color,30));
+    .ui-slider-range {
+      background: @green;
+    }
+  }
+  &.yellow {
+    border:0;
+    .box-shadow(inset 0 0 1px darken(@border-color,30));
+    .ui-slider-range {
+      background: @yellow;
+    }
+  }
+  &.red {
+    border:0;
+    .box-shadow(inset 0 0 1px darken(@border-color,30));
+    .ui-slider-range {
+      background: @red;
+    }
+  }
+}
+
+.ui-widget-content, .ui-widget-header {
+  border-color:@border-color; 
+}

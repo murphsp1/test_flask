@@ -1,0 +1,87 @@
+input {
+//  max-width: 400px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+  color:@dark-blue;
+  border-color:@border-color;
+  .box-shadow(none);
+  &:focus, &:active {
+    border-color:lighten(@blue, 10);
+    .box-shadow(0 0 4px lighten(@blue, 20));
+    background: lighten(@blue, 46);
+  }
+  &.error {
+    border-color:lighten(@red, 20);
+    .box-shadow(none);
+    background: lighten(@red, 46);
+    &:focus, &:active {
+      border-color:@red;
+      .box-shadow(0 0 4px lighten(@red, 30));
+    }
+  }
+  &.success {
+    border-color:@green;
+    .box-shadow(none);
+    background: lighten(@green, 53);
+    &:focus, &:active {
+      border-color:darken(@green, 4);
+      .box-shadow(0 0 4px lighten(@green, 25));
+    }
+  }
+}
+
+.form-group, .input-group {
+  .input-group-addon {
+    border-color:@border-color;
+    background: @very-light-gray;
+    color:@dark-blue;
+  }
+  .control-label {
+    text-align: left;
+    font-weight: 400;
+  }
+}
+
+.form-control {
+  position: relative;
+}
+label.select {
+  position: relative;
+  width: 100%;
+  color:@dark-blue;
+  &:before {
+    pointer-events: none;
+    position: absolute;
+    top:20%;
+    right:0;
+    content:"\f0dc";
+    font-family: FontAwesome;
+    z-index: 1;
+    padding:0 10px;
+  }
+}
+select.form-control, select {
+  width:100%;
+  background: #fff;
+  border-color:@border-color;
+  .border-radius(4px);
+  -webkit-appearance: none;
+  .box-shadow(none);
+  &:before {
+    content:"#";
+  }
+}
+
+input[disabled] {
+  background: #eee;
+  border-color:#ccc;
+  .box-shadow(none);
+  color:#999;
+  &:hover, &:active, &:focus {
+    .box-shadow(none);
+    background: #eee;
+    border-color:#ccc;
+    color:#999;
+  }
+}

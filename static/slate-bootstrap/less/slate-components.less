@@ -1,0 +1,132 @@
+.slate-statboxes {
+  padding:0 !important;
+}
+.slate-statbox {
+  .clearfix();
+  border-right:1px solid @border-color;
+  padding:15px;
+  &:last-child {
+    border:0;
+  }
+  i.slate-statbox-icon {
+    font-size: 48px;
+    float:left;
+  }
+  .slate-statbox-title {
+    font-size: 20px;
+    text-indent:10px;
+  }
+  .slate-statbox-value {
+    font-size:16px;
+    text-indent:10px;
+  }
+  &.red {
+    i {
+      color:@red;
+    }
+    .slate-statbox-value {
+      color:@medium-gray;
+    }
+  }
+  &.purple {
+    i {
+      color:@purple;
+    }
+    .slate-statbox-value {
+      color:@medium-gray;
+    }
+  }
+  &.blue {
+    i {
+      color:@blue;
+    }
+    .slate-statbox-value {
+      color:@medium-gray;
+    }
+  }
+  &.green {
+    i {
+      color:@green;
+    }
+    .slate-statbox-value {
+      color:@medium-gray;
+    }
+  }
+  &.yellow {
+    i {
+      color:@yellow;
+    }
+    .slate-statbox-value {
+      color:@medium-gray;
+    }
+  }
+  i.fa-caret-up {
+    color:@green;
+  }
+  i.fa-caret-down {
+    color:@red;
+  }
+}
+
+
+
+.slate-colorbox {
+  .border-radius(3px);
+  padding:15px;
+  .box-sizing(border-box);
+  .clearfix();
+  .label {
+    line-height: 40px;
+    padding:0 10px;
+  }
+  &.red {
+    background:@red;
+    color:#fff;
+    border:1px solid darken(@red, 15);
+    .label {
+      background:darken(@red, 10);
+      border:0;
+      color:#fff;
+    }
+  }
+  &.blue {
+    background:@blue;
+    color:#fff;
+    border:1px solid darken(@blue, 15);
+    .label {
+      background:darken(@blue, 10);
+      border:0;
+      color:#fff;
+    }
+  }
+  &.green {
+    background:@green;
+    color:#fff;
+    border:1px solid darken(@green, 15);
+    .label {
+      background:darken(@green, 5);
+      border:0;
+      color:#fff;
+    }
+  }
+  &.yellow {
+    background:@yellow;
+    color:@yellow-dark-text;
+    border:1px solid darken(@yellow, 15);
+    .label {
+      background:darken(@yellow, 10);
+      border:0;
+      color:@yellow-dark-text;
+    }
+  }
+  i {
+    float:left;
+    font-size:40px;
+    line-height: 40px;
+  }
+  .slate-colorbox-label {
+    float:left;
+    line-height: 40px;
+    padding:0 0 0 10px;
+  }
+}

@@ -1,0 +1,212 @@
+.navbar {
+  margin:0;
+  background: @dark-blue;
+  color:#fff;
+  z-index: 5;
+  .border-radius(0);
+  a {
+    color:#fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .row {
+    margin:0;
+    padding:0;
+  }
+  .slate-nav {
+    float:right;
+    color:#fff;
+    margin-top:4px;
+    &.nav-pills>li {
+      margin:0px 1px 0 0;
+    }
+    &.nav-pills>li+li {
+      margin:0px 1px 0 0;
+    }
+    li {
+      &:first-child {
+        a {
+          .border-radius(4px 0 0 4px);
+        }
+        &.dropdown-header a {
+          .border-radius(0);
+        }
+      }
+      &:last-child {
+        a {
+          .border-radius(0 4px 4px 0);
+        }
+        &.dropdown-footer a {
+          .border-radius(0);
+        }
+      }
+      a {
+        .border-radius(0);
+        background: @navbar-menu-background;
+        color:#fff;
+        &:hover, &:active, &:focus {
+          background: @blue;
+          color:#fff;
+          .badge {
+            background:#fff;
+            color:@blue;
+            border-color:#fff;
+          }
+        }
+      }
+    }
+  }
+  .dropdown-menu {
+    min-width:240px;
+    margin-top:2px;
+    .border-radius(4px);
+    .box-shadow(0 2px 4px rgba(0,0,0,.08));
+    border:1px solid rgba(0,0,0,.1);
+    &.pull-right {
+      margin-right:-1px;
+      margin-top:-3px;
+    }
+    li {
+      a {
+        color:@dark-blue;
+        background: none;
+        .border-radius(0);
+        &:hover {
+          color:#fff;
+          background: @blue;
+        }
+      }
+      &.disabled {
+        a {
+          color:@medium-gray;
+          &:hover {
+            background:@light-gray;
+          }
+        }
+      }
+    }
+    .dropdown-header {
+      padding:8px 20px 16px 20px;
+      border-bottom:1px solid @border-color;
+      font-size:14px;
+      color:@dark-blue;
+      margin-bottom:8px;
+      a {
+        .border-radius(0);
+      }
+    }
+    .dropdown-footer {
+      padding:8px 0 4px 0;
+      border-top:1px solid @border-color;
+      font-size:14px;
+      color:@dark-blue;
+      margin-top:8px;
+      a {
+        .border-radius(0);
+      }
+    }
+  }
+}
+
+// Button to open mobile menu
+.toggle-button {
+  position: absolute;
+  top:15px;
+  left:0;
+  padding:0;
+  margin:0;
+  -webkit-appearance: none;
+  border:0;
+  .box-shadow(none);
+  background: none;
+  color:#fff;
+  display: none;
+}
+
+.nav-search {
+  position: absolute;
+  left:222px;
+  margin:9px 0 0 0;
+  form {
+    position: relative;
+  }
+  input {
+    background: @navbar-menu-background;
+    padding:5px 15px 5px 35px;
+    border:0;
+    width:140px;
+    .box-shadow(none);
+    .border-radius(34px);
+    color:#fff;
+    .transition(background 0.3s ease-out, width 0.3s ease-out, color 0.5s ease-out;);
+    outline: none;
+    &:focus {
+      outline: none;
+      background: #fff;
+      color:@dark-blue;
+      width:240px;
+    }
+  }
+  &:before {
+    content:"\f002";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    left:14px;
+    top:7px;
+    pointer-events: none;
+    color:#fff;
+    .transition(color 0.5s ease-out);
+    z-index: 2;
+  }
+  &.light {
+    &:before {
+      color:@dark-blue;
+    }
+  }
+  &.dark {
+    &:before {
+      color:#fff;
+    }
+  }
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+  background: @navbar-menu-background;
+  color:@medium-gray;
+}
+
+@media (max-width: 767px) {
+  .title {
+    float:none;
+    margin-left:25px;
+  }
+  .main {
+    margin-left:0;
+  }
+  .toggle-button {
+    display: inline-block;
+  }
+  .nav-search {
+    float:none;
+    position: relative;
+    left:0;
+    margin:5px 0 15px 0;
+    input {
+      .transition(background 0.3s ease-out, color 0.3s ease-out;);
+      width:100%;
+      .border-radius(4px);
+      &:focus {
+        width:100%;
+      }
+    }
+  }
+  .slate-nav {
+    display:none;
+  }
+}

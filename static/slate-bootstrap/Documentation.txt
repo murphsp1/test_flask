@@ -1,0 +1,20 @@
+# Slate Admin Bootstrap Theme
+# By alexandredeschamps.ca
+# For support requests or suggestions : des.alexandre@gmail.com
+
+CSS:
+
+The only CSS you need to load on top of Bootstrap’s is “slate-theme.css”
+
+It is compiled from the LESS files.
+
+If you apply changes to some of the LESS files, make sure you re-compile using “slate-theme.less”
+
+—
+JavaScript:
+
+Make sure “js/slate.js” is included on all pages. It is necessary for the navbar’s search field.
+
+All the other useful javascript plugins are located in “js/plugins”.
+
+Some javascript has been written on each page for some demonstration purposes. It can be found before the end of the Body Tag, at the bottom of each page.

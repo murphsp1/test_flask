@@ -1,0 +1,146 @@
+.sidebar { 
+  position: absolute;
+  top:50px;
+  width:240px;
+  z-index: 1;
+  color:#fff;
+  hr {
+    margin:15px;
+    border-color:lighten(@sidebar-hover, 10);
+    &:last-child {
+      padding-bottom:15px;
+    }
+  }  
+  &.collapse {
+    display: block;
+  }
+  .progress {
+    background: @navbar-menu-background;
+  }
+  .slate-sidebar-container {
+    &:last-child {
+      padding-bottom:15px;
+    }
+  }
+  .nav-list {
+    a {
+      color:@medium-gray;
+      &:hover {
+        color:#fff;
+        background: @sidebar-hover;
+      }
+    }
+    &:last-child {
+      padding-bottom:15px;
+    }
+    li {
+      &.active {
+        a {
+          color:#fff;
+        }
+      }
+      &:hover {
+        span:not(.badge) {
+          color:#fff;
+        }
+        a {
+          span.sidebar-label {
+            color:#fff;
+            padding-left:14px;
+          }
+        }
+      }
+      a {
+        span.sidebar-label {
+          .transition(padding 0.15s ease-out);
+        }
+        padding:15px;
+        &:active {
+          .opacity(50);
+        }
+      }
+      span {
+        padding-left:8px;
+      }
+    }
+  }
+  
+  // Submenus
+  .nav-list li .nav-list {
+    &:last-child {
+      padding-bottom:0;
+    }
+    background:@darker-blue;
+    li {
+      &:last-child {
+        a {
+          padding-bottom:18px;
+        }
+      }
+      a {
+        padding:15px 0 0 45px;
+        .transition(padding 0.15s ease-out);
+        &:hover {
+          background: @darker-blue;
+          padding-left:49px;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-background {
+  position: fixed;
+  background: @dark-blue;
+  left:0;
+  height:100%;
+  width:240px;
+  top:0;
+}
+
+.slate-sidebar-container {
+  padding:0 20px;
+  .clearfix();
+}
+
+.slate-profile {
+  position: relative;
+  background: @blue;
+  padding:15px 0 0 0;
+  margin-bottom:15px;
+  .slate-profile-text {
+    text-align: center;
+  }
+  .slate-profile-action {
+    text-align: center;
+    padding:15px 0 20px 0;
+    div, button, a {
+      text-align: left;
+    }
+  }
+  .avatar {
+    width:100px;
+    .border-radius(100px);
+    margin:0 auto 15px auto;
+    img {
+      border:3px solid #fff;
+      .border-radius(100px);
+      .box-sizing(border-box);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    position: relative;
+    background: @dark-blue;
+    width:100%;
+    top:0;
+    &.collapse {
+      display: none;
+    }
+  }
+  .sidebar-background {
+    display:none;
+  }
+}

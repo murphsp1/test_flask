@@ -1,0 +1,44 @@
+.slate-message {
+  max-width: 300px;
+}
+
+.slate-message-avatar {
+  width:60px;
+  height:60px;
+  .border-radius(60px);
+  margin-right:10px;
+  border:2px solid transparent;
+  .transition(all 0.3s ease-out);
+}
+
+.slate-message-body {
+  max-width: 130px;
+  vertical-align: middle;
+  white-space: normal;
+  display: inline-block;
+  padding:5px 0;
+}
+
+.slate-message-title {
+  display: inline-block;
+  .slate-message-title-name {
+    color:@blue;
+    font-weight: 700;
+  }
+}
+.slate-message-date {
+  display: block;
+  color:@medium-gray;
+}
+
+.slate-message { 
+  a:hover {
+    .slate-message-body, .slate-message-title, .slate-message-title-name, .slate-message-date {
+      color:#fff;
+    }
+    .slate-message-avatar {
+      border:2px solid #fff;
+      .rotate(7deg);
+    }
+  }
+}
