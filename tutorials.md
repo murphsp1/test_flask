@@ -6,6 +6,10 @@ This file will contain interesting tidbits learned while doing flask and also hi
 
 ## Pure Python ##
 
+A great explanation of the Python __some_function__ magic methods.
+http://www.rafekettler.com/magicmethods.html
+
+
 ### Decorators ###
 
 type up my own understanding here
